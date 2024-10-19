@@ -1,31 +1,27 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 42Summaries
+  site: 'https://42summaries.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: null # or "XXXXXXXXX"
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: '42Summaries'
+    template: '%s — 42Summaries'
+  description: "\U0001F50A Create easy Summaries"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 42Summaries
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
 
 i18n:
   language: en
@@ -33,7 +29,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:

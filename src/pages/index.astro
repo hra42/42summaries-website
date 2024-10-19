@@ -4,16 +4,14 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: '42Summaries — Create easy Summaries',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,28 +23,23 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Get the app',
+        href: 'https://apps.apple.com/de/app/42summaries/id6736508972?l=en-GB&mt=12',
         target: '_blank',
         icon: 'tabler:download',
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero1.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Create easy Summaries
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        <span class="font-semibold">42Summaries</span> Your Ultimate Audio and Video Transcription and
+        Summarization Tool.</span>
     </Fragment>
   </Hero>
 
@@ -57,46 +50,46 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    id="short-overview"
+    tagline="short Overview"
+    title="What you get with 42Summaries"
+    subtitle="Unlock the power of your audio and video content!"
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Effortless Transcription',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Transcribe your audio and video content with a simple and intuitive interface.',
+        icon: 'tabler:microphone',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Intelligent Summarization',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Get the most important parts of your audio and video content with our powerful summarization tool.',
+          icon: 'tabler:align-box-left-middle',
       },
       {
-        title: 'Best Practices',
+        title: 'Privacy and Security',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'All processing done locally on your machine. No data is sent to us.',
+        icon: 'tabler:shield-lock',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Easy to Use',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'A simple and intuitive interface makes it easy to transcribe and summarize your audio and video content.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'High Performance',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Our app is optimized for speed and performance. It's fast and efficient, ensuring a smooth user experience.",
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Free and Open Source',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Our app is free and open source, allowing you to use it for free. You can also contribute to the development of the app.',
+        icon: 'tabler:code',
       },
     ]}
   />
@@ -105,33 +98,34 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    id="42summaries-features"
+    tagline="42Summaries  Features"
+    title="Make your audio and video content more engaging!"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Format Support',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Supports a wide range of multimedia formats',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Speech Recognition',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'State-of-the-art speech recognition',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Progress Tracking',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Real-time progress tracking with Notifications',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/transcript.png',
+      alt: 'Transcript Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Effortless Transcription</h3>
+      Transcribe your audio and video content with a simple and intuitive interface.
     </Fragment>
 
     <Fragment slot="bg">
@@ -145,32 +139,33 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Powered by Ollama, OpenAI and Anthropic',
+        description: `Our AI models are designed to generate summaries that are both informative and engaging.`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Customizable summary length and focus',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Use a custom prompt to generate summaries of any length and focus on specific aspects of your content.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Key point extraction for quick insights',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          "Our AI models can identify key points and phrases that are essential to understanding the content.",
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Multi-language support',
+        description: `Our AI models are designed to generate summaries in multiple languages, ensuring that your content is accessible to a wider audience.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/summary.png',
+      alt: 'Summary Image',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
+    <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Intelligent Summarization</h3>
+    Summary Generation with the power of AI and Natural Language Processing (NLP) techniques.
+    </Fragment>
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -183,31 +178,34 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'All processing done locally on your machine',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'No data is sent to us. All processing is done locally on your machine.',
       },
       {
-        title: 'Continuous improvement',
+        title: 'No Cloud Uploads or data sharing',
         description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+          'We do not store any of your data on our servers. We value your data privacy.',
       },
       {
-        title: 'Time and resource efficiency',
+        title: 'Offline Functionality for transcription and summarization',
         description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+          'You can use our app offline for transcription and summarization. No internet connection is required.',
       },
       {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Free and Open Source',
+        description: `Our app is free and open source, allowing you to use it for free. You can also contribute to the development of the app.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: '~/assets/images/privacy.png',
+      alt: 'Privacy Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Privacy and Security</h3>
+      We value your privacy and security.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -217,25 +215,25 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="get-started"
+    title="Get your dream audio and video content up and running in no time with 42Summaries."
     items={[
       {
         title: 'Step 1: <span class="font-medium">Download</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Download the app from the App Store. It's free!",
+        icon: 'tabler:download',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Install Ollama</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Install Ollama and download a model. Use your terminal and run the following command: ollama pull llama3.2",
+        icon: 'tabler:pencil-exclamation',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+        title: 'Step 3: <span class="font-medium">Start the app</span>',
+        description:'Start the app and follow the navigation to select the audio or video file you want to summarize, generate a summary and save it to your device.',
+        icon: 'tabler:play',
       },
       {
         title: 'Ready!',
@@ -243,122 +241,49 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: '~/assets/images/install.png',
+      alt: 'Install Image',
     }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="faqs"
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Dive into the following questions to gain insights into the powerful features that 42Summaries offers and how it can elevate your content understanding."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'Why 42Summaries?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Use your own powerful hardware to generate summaries of your audio and video content. No need to pay for cloud services.",
       },
       {
         title: 'What do I need to start?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Install Ollama and download a model. Use your terminal and run the following command: ollama pull llama3.2',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'How to install Ollama?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Download the ollama app from <a href=https://ollama.com/>Ollama</a> and follow the instructions. You can also use the command line to install ollama with brew install ollama",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "Why is the app only available for MacOS?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "We want to provide the best experience for everyone. With Linux and Windows it's hard to provide a seamless experience, as we don't know the hardware used.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'What is the app for?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "Transcription and summarization is a powerful tool for understanding audio and video content. It's a valuable skill for anyone who wants to learn more about the content they consume.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Why is the app free?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "We believe in the power of open source software. We value free knowledge sharing and collaboration. Our app is free and open source, allowing you to use it for free. You can also contribute to the development of the app.",
       },
     ]}
   />
@@ -367,10 +292,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Downloads', amount: '4' },
+      { title: 'Stars', amount: '1' },
+      { title: 'Forks', amount: '0' },
+      { title: 'Reviews', amount: '0' },
     ]}
   />
 
@@ -380,20 +305,19 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Get the app',
+        href: 'https://apps.apple.com/de/app/42summaries/id6736508972?l=en-GB&mt=12',
         target: '_blank',
         icon: 'tabler:download',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">42Summaries</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Get your copy now! <br class="hidden md:inline" />Don't wait - it's free!
     </Fragment>
   </CallToAction>
 </Layout>
