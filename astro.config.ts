@@ -12,7 +12,6 @@ import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
-import cloudflare from '@astrojs/cloudflare';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
@@ -23,8 +22,11 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'server',
-  adapter: cloudflare(),
+  output: 'static',
+
+  prefetch: {
+    prefetchAll: true,
+  },
 
   integrations: [
     tailwind({
