@@ -28,27 +28,15 @@ export const headerData = {
       ],
     },
     {
-      text: 'About Me',
+      text: 'About',
       links: [
         {
-          text: 'Who I am',
-          href: getPermalink('/about-us/about'),
-        },
-        {
-          text: 'Contact Me',
-          href: getPermalink('/about-us/contact'),
-        },
-        {
-          text: 'My Mission',
-          href: getPermalink('/about-us/our-mission'),
+          text: 'Imprint',
+          href: getPermalink('/about-us/imprint'),
         },
         {
           text: 'Privacy',
           href: getPermalink('/about-us/privacy'),
-        },
-        {
-          text: 'Imprint',
-          href: getPermalink('/about-us/imprint'),
         },
       ],
     },
