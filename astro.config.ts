@@ -12,10 +12,9 @@ import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
 import astrowind from './vendor/integration';
+import cloudflare from '@astrojs/cloudflare';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
-
-import cloudflare from '@astrojs/cloudflare';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -24,6 +23,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
+  output: 'server',
+  adapter: cloudflare(),
+
   integrations: [
     tailwind({
       applyBaseStyles: false,
@@ -72,7 +74,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cloudflare.com'],
+    domains: ['cdn.pixabay.com'],
   },
 
   markdown: {
@@ -87,9 +89,4 @@ export default defineConfig({
       },
     },
   },
-
-  adapter: cloudflare({
-    imageService: 'cloudflare'
-  }),
-  output: 'server',
 });
