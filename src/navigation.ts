@@ -45,6 +45,16 @@ export const headerData = {
 };
 
 export const footerData = {
+  links: [
+    {
+      title: '42Summaries',
+      links: [
+        { text: 'Home', href: getPermalink('/') },
+        { text: 'App', href: getPermalink('/#short-overview') },
+        { text: 'About', href: getPermalink('/about-us/imprint') },
+      ],
+    },
+  ],
   secondaryLinks: [
     { text: 'Imprint', href: getPermalink('/about-us/imprint') },
     { text: 'Privacy Policy', href: getPermalink('/about-us/privacy') },
