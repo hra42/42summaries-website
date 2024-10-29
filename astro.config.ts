@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { defineConfig, passthroughImageService } from 'astro/config';
+import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
@@ -15,8 +15,6 @@ import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
-import cloudflare from '@astrojs/cloudflare';
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -24,7 +22,7 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'server',
+  output: 'static',
 
   prefetch: {
     prefetchAll: true,
@@ -78,7 +76,7 @@ export default defineConfig({
   ],
 
   image: {
-    service: passthroughImageService()
+    domains: ['cdn.pixabay.com'],
   },
 
   markdown: {
@@ -93,8 +91,4 @@ export default defineConfig({
       },
     },
   },
-
-  adapter: cloudflare({
-    imageService: 'cloudflare'
-  }),
 });
