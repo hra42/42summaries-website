@@ -73,6 +73,5 @@ export const footerData = {
       href: 'https://apps.apple.com/de/app/42summaries/id6736508972?l=en-GB&mt=12',
     },
     { ariaLabel: 'Testflight', icon: 'tabler:test-pipe', href: 'https://testflight.apple.com/join/yP2NuC4V' },
-    { ariaLabel: 'Notion', icon: 'tabler:brand-notion', href: 'https://42summaries.notion.site' },
   ],
 };
